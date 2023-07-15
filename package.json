@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^2.0.2",
 		"@types/luxon": "^3.3.0",
 		"luxon": "^3.3.0",
 		"sass": "^1.63.6"
