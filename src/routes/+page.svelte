@@ -49,18 +49,26 @@
 		<fieldset>
 			<legend>Capital</legend>
 			<input type="number" name="capital" bind:value={startingCapital} />
+
+			<p>Input how much capital you are starting with.</p>
 		</fieldset>
 		<fieldset>
 			<legend>Years</legend>
 			<input type="number" name="years" bind:value={years} />
+
+			<p>How many years into the future to simulate.</p>
 		</fieldset>
 		<fieldset>
 			<legend>Monthly savings</legend>
 			<input type="number" name="monthlySavings" bind:value={monthlySavings} />
+
+			<p>How much you are able to save each month.</p>
 		</fieldset>
 		<fieldset>
 			<legend>Appreciation</legend>
 			<input type="number" name="appreciation" bind:value={appreciation} />
+
+			<p>Average growth in % year on year.</p>
 		</fieldset>
 	</form>
 
@@ -70,6 +78,7 @@
 			<div class="capital">
 				{moneyFormat.format(capital)}
 			</div>
+			if you save {monthlySavings} every month
 		</div>
 	{/if}
 
@@ -95,6 +104,7 @@
 		grid-template-columns: repeat(4, 1fr);
 		margin: auto;
 		max-width: 1000px;
+		padding: 64px;
 
 		fieldset {
 			background: #f3f3f3;
@@ -120,6 +130,11 @@
 				text-align: center;
 				width: 80%;
 			}
+
+			p {
+				color: #8a8a8a;
+				font-size: 12px;
+			}
 		}
 	}
 
@@ -133,10 +148,13 @@
 	}
 
 	.events {
+		overflow-x: scroll;
 		ul {
 			display: grid;
 			grid-gap: 16px;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			//grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-auto-flow: column;
+			grid-auto-columns: 200px;
 			list-style: none;
 			padding: 0;
 			li {
