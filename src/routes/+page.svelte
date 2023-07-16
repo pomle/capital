@@ -49,24 +49,28 @@
     <fieldset>
       <legend>Capital</legend>
       <input type="number" name="capital" bind:value={startingCapital} />
+      <input type="range" min="0" max="1000000" step="10000" bind:value={startingCapital} />
 
       <p>Input how much capital you are starting with.</p>
     </fieldset>
     <fieldset>
       <legend>Years</legend>
       <input type="number" name="years" bind:value={years} />
+      <input type="range" min="1" max="80" bind:value={years} />
 
       <p>How many years into the future to simulate.</p>
     </fieldset>
     <fieldset>
       <legend>Monthly savings</legend>
       <input type="number" name="monthlySavings" bind:value={monthlySavings} />
+      <input type="range" min="500" max="25000" step="500" bind:value={monthlySavings} />
 
       <p>How much you are able to save each month.</p>
     </fieldset>
     <fieldset>
       <legend>Appreciation</legend>
       <input type="number" name="appreciation" bind:value={appreciation} />
+      <input type="range" min="0" max="20" step="0.5" bind:value={appreciation} />
 
       <p>Average growth in % year on year.</p>
     </fieldset>
